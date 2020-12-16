@@ -1310,7 +1310,7 @@
                                                      <li><a href="../shop/single-product-extended.html"
                                                              class="nav-link u-header__sub-menu-nav-link">Single Product
                                                              Extended</a></li>
-                                                     <li><a href="../shop/single-product-fullwidth.html"
+                                                     <li><a href="../ "
                                                              class="nav-link u-header__sub-menu-nav-link">Single Product
                                                              Fullwidth</a></li>
                                                      <li><a href="../shop/single-product-sidebar.html"

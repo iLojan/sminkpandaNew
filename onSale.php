@@ -44,7 +44,7 @@
                             <div class="main-menu-box">
                                 <div class="mb-2"><a href=""
                                         class="font-size-12 text-gray-5"><?php echo $row['shop_name']; ?></a></div>
-                                <h5 class="mb-1 product-item__title"><a href="../shop/single-product-fullwidth.html"
+                                <h5 class="mb-1 product-item__title"><a href="../ "
                                         class="text-blue font-weight-bold"><?php echo $row['title']; ?></a></h5>
 
 

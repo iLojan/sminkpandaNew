@@ -8,51 +8,67 @@
 
 <?php include '../header.php'; ?>
 
-<body>
+<body class="bg-gray-50">
+
+
+
+
+
+
+
     <?php include '../navbar.php'; ?>
+
+
     <div class="container" id="productListApp">
-        <div class="col-md-12 m-auto">
-            <div class="col-12 shop-title mb-4 mt-3">
-                <h1>Hi Moa Admin! Welcome back ! </h1>
-                <span>Manage your Shops and other services here</span>
-            </div>
-            <input type="hidden" id="shopId" value="<?php echo $_GET['a']?>">
+        <div class="w-full lg:w-4/5 m-auto">
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"> </th>
-                        <th scope="col">Product title</th>
-                        <th scope="col">Category</th>
-                        <th scope="col"> Sub category name</th>
-                        <th scope="col">
-                            <div class="w-100 text-right">
-                                <a class="btn btn-primary" @click="addNewItem()">
+            <div class="grid grid-cols-8 gap-6 px-4">
+                <div class="col-span-8">
+                    <div class="text-center my-5">
+                        <h1 class="mt-6 text-center text-2xl font-extrabold text-gray-900">Hi Moa Admin! Welcome back !
+                        </h1>
+                        <span class="mt-2 text-center text-sm text-gray-600">Manage your Shops and other services
+                            here</span>
+                    </div>
+                    <input type="hidden" id="shopId" value="<?php echo $_GET['a']?>">
+                    <div class="w-100 text-right my-4">
+                        <a class="px-5 py-1 my-4 rounded text-white text-sm bg-color" @click="addNewItem()">
 
-                                    <i class="fas fa-plus"></i>
-                                    <label for class="mb-0"> Add Shops</label>
-                                </a>
-                            </div>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(item,index) in product" :key="index" v-if="item.title">
-
-                        <th scope="row">{{item.id}}</th>
-                        <td>{{item.title}}</td>
-                        <td>{{item.category_name}}</td>
-                        <td>{{item.sub_category_name}}</td>
-                        <td> <span class="table-remove">
+                            <!-- <svg class="text-xs" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                    </svg> -->
+                            <label for class="mb-0"> Add Shops</label>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-8 lg:col-span-2 md:col-span-3" v-for="(item,index) in product" :key="index"
+                    v-if="item.title">
+                    <div class="bg-white rounded overflow-hidden shadow-md">
+                        <div class=""
+                                                v-for="(code,index) in (item.images.split(','))" v-if="index < 1">
+                        <img :src='"../../images/"+code' class="w-full lg:h-40 h-44" alt=""
+                            srcset="">
+                        <div class="m-4">
+                            <span class="font-bold">{{item.title}}</span>
+                            <span class="block text-gray500 text-sm">{{item.sub_category_name}}</span>
+                            <span class="table-remove block mt-4">
                                 <a href="./product-setup.php?id=product.id&shop_id='.$shopId.'"></a>
-                                <a type="button" class="btn btn-success" @click="editProperty(item.id,item.shop_id)"><i
-                                        class="fas fa-edit"></i>Edit</a>
-                                <button type="button" class="btn btn-secondary"
+                                <a type="button" class="px-5 py-1  rounded text-white text-sm bg-color"
+                                    @click="editProperty(item.id,item.shop_id)">
+
+                                    Edit</a>
+                                <button type="button"
+                                    class="px-5 py-1  rounded text-white text-sm bg-red-500 float-right"
                                     @click="removeProperty(item.id)">Remove</button>
-                            </span></td>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </tr>
-        </tbody>
+
         </table>
 
 

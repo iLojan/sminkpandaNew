@@ -78,7 +78,9 @@
 .card-footer {
     text-align: justify;
 }
-
+.bg-color{
+    background: #09B7A3;
+}
 .success-btn,.success-header {
     background: #09B7A3;
     color: #fff;

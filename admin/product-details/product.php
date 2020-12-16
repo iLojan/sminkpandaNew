@@ -67,7 +67,7 @@ elseif($_POST['type'] == 'save'){
    
   //  -=============
   
-  $stmt = $conn->prepare("insert into product(category,subCategory,title,priceType,quantity,price,productCondition,brand,authenticity,description,shopId,create_date) 
+  $stmt = $conn->prepare("insert into product(category,subCategory,name,priceType,quantity,price,productCondition,brand,authenticity,description,shopId,create_date) 
   values(:category,:subCategory,:title,:priceType,:quantity,:price,:productCondition,:brand,:authenticity,:description,:shopId,:create_date)");
 
   $stmt->bindParam(":category",$category);
@@ -136,7 +136,7 @@ echo $value->name;
 }
 else{
    $stmt = $conn->prepare("UPDATE product SET 
-    category=:category,subCategory=:subCategory,title=:title,
+    category=:category,subCategory=:subCategory,name=:title,
     priceType=:priceType,quantity=:quantity,price=:price,
     productCondition=:productCondition,brand=:brand,
     authenticity=:authenticity,description=:description,
@@ -211,12 +211,17 @@ echo $value->name;
   
   // echo json_encode(array("statusCode"=>$output));
 }
+
+
+
+
 elseif($_POST['type'] == "product-list"){
     $shopId = $_POST['shopId'];
     $stmt = $conn->prepare("SELECT p.id,p.name as title,p.brand,p.productCondition,p.price,p.priceType,p.authenticity,p.description,s.id 
     as shop_id,s.name as shop_name,c.id as category_id,c.name as category_name,sc.id 
-    as sub_c_id,sc.name as sub_category_name 
+    as sub_c_id,sc.name as sub_category_name, GROUP_CONCAT(i.url ORDER BY i.url) AS images     
     FROM product p INNER JOIN shops s on p.shopId = s.id 
+    LEFT JOIN  product_images i ON p.id = i.product_id
     INNER JOIN category c on p.category = c.id 
     INNER JOIN subcategory sc on p.subCategory = sc.id 
     where p.shopId = $shopId");

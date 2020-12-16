@@ -34,19 +34,23 @@
                           <div class="px-4 py-5 bg-white sm:p-6">
                               <div class="grid grid-cols-6 gap-6">
 
-                                  <div class="col-span-6 ">
+                                  <div class="col-span-6 lg:col-span-5">
                                       <label for="first_name" class="block text-sm font-medium text-gray-700">First
                                           name</label>
                                       <input type="text" v-model="shop.name" autocomplete="off" :class="inputClassName">
                                   </div>
 
-                                  <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+
+
+                                  <div class="col-span-6 lg:col-span-2 ">
                                       <label for="city" class="block text-sm font-medium text-gray-700">Mobile
                                           Number</label>
                                       <input type="text" v-model='shop.mobile' id="city" :class="inputClassName">
                                   </div>
 
-                                  <div class="col-span-6 sm:col-span-4">
+
+
+                                  <div class="col-span-6 lg:col-span-3 col-start-1">
                                       <label for="email_address" class="block text-sm font-medium text-gray-700">Email
                                           address</label>
                                       <input type="text" v-model='shop.email' autocomplete="off"
@@ -55,13 +59,13 @@
 
 
 
-                                  <div class="col-span-6">
+                                  <div class="col-span-6 lg:col-span-5 col-start-1">
                                       <label for="street_address"
                                           class="block text-sm font-medium text-gray-700">Address Line 1</label>
                                       <input type="text" v-model="shop.addressLine1" autocomplete="off"
                                           :class="inputClassName">
                                   </div>
-                                  <div class="col-span-6">
+                                  <div class="col-span-6 lg:col-span-5">
                                       <label for="street_address"
                                           class="block text-sm font-medium text-gray-700">Address Line 2</label>
                                       <input type="text" v-model="shop.addressLine2" autocomplete="off"

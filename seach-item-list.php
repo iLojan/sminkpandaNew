@@ -53,11 +53,13 @@ where c.name ="Fashion & Beauty" or sc.name = "".$_GET['name']. -->
 
 
                             <div class="main-menu-box">
-                                <div class="mb-2"><a href=""
-                                        class="font-size-12 text-gray-5"><?php echo $row['subcategory_name']; ?></a>
+
+                                <div class="mb-2">
+                                    <a class="font-size-12 text-gray-5"><?php echo $row['subcategory_name']; ?></a>
                                 </div>
-                                <h5 class="mb-1 product-item__title"><a href="../shop/single-product-fullwidth.html"
-                                        class="text-blue font-weight-bold"><?php echo $row['property_name']; ?></a></h5>
+                                <h5 class="mb-1 product-item__title"><a
+                                        class="text-blue font-weight-bold"><?php echo $row['property_name']; ?></a>
+                                </h5>
 
 
                                 <div class="menu-icon">
@@ -72,7 +74,7 @@ where c.name ="Fashion & Beauty" or sc.name = "".$_GET['name']. -->
                                     <img class="img-fluid" src="./images/<?php echo $rowImg['url'];?>"
                                         alt="Image Description">
 
-                                    </a>
+
                                     <?php } ?>
 
                                 </div>
@@ -81,9 +83,11 @@ where c.name ="Fashion & Beauty" or sc.name = "".$_GET['name']. -->
 
 
                                 <div class="border-top pt-2 flex-center-between flex-wrap">
-                                    <button class="add-btn"><i class="fas fa-cart-arrow-down"></i>Add to cart</button>
+                                    <a class="add-btn " href="./item-details.php?id=<?php echo $row['id']; ?>"><i
+                                            class="fas fa-cart-arrow-down"></i>Buy</a>
 
                                 </div>
+
                             </div>
 
 

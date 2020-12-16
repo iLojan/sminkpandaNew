@@ -18,7 +18,7 @@
                                         <sup class="">$</sup>749<sup class="">99</sup>
                                     </div>
                                 </div>
-                                <a href="../shop/single-product-fullwidth.html"
+                                <a href="../ "
                                     class="btn btn-secondary btn-primary transition-3d-hover btn-color rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
                                     data-scs-animation-in="fadeInUp" data-scs-animation-delay="400">
                                     Start Buying
@@ -45,7 +45,7 @@
                                         <sup class="">$</sup>749<sup class="">99</sup>
                                     </div>
                                 </div>
-                                <a href="../shop/single-product-fullwidth.html"
+                                <a href="../ "
                                     class="btn btn-secondary btn-color transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-16"
                                     data-scs-animation-in="fadeInUp" data-scs-animation-delay="400">
                                     Start Buying
@@ -72,7 +72,7 @@
                                         <sup class="">$</sup>749<sup class="">99</sup>
                                     </div>
                                 </div>
-                                <a href="../shop/single-product-fullwidth.html"
+                                <a href="../ "
                                     class="btn btn-secondary btn-color transition-3d-hover rounded-lg font-weight-normal py-2 px-md-7 px-3 font-size-15"
                                     data-scs-animation-in="fadeInUp" data-scs-animation-delay="400">
                                     Start Buying
